@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>📝 To-Do App</h1>
+
+        <form id="todo-form" class="todo-form" novalidate>
+          <input
+            type="text"
+            id="task"
+            placeholder="Enter your task..."
+            required
+          />
+          <input type="date" id="date" required />
+          <button type="submit" id="add-btn">Add</button>
+        </form>
+
+        <div class="actions">
+          <button id="filter-toggle">FILTER</button>
+          <button id="clear-btn" class="danger">DELETE ALL</button>
+        </div>
+
+        <div class="filter-panel hidden" id="filter-panel">
+          <input type="search" id="filter-text" placeholder="Search tasks..." />
+          <input type="date" id="filter-date" />
+          <button id="apply-filter">APPLY</button>
+          <button id="reset-filter">RESET</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list">
+          <li class="empty">No tasks yet. Add one above 👆</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
